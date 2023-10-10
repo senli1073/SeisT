@@ -1,11 +1,15 @@
 # Seismogram Transformer (SeisT)
 
+<p align="center">
+  <img src="images/arch_main.png" width="480">
+</p>
+
 ## Introduction
 SeisT is a backbone network for seismic signal processing, which can be used for multiple seismic monitoring tasks such as earthquake detection, seismic phase picking, first-motion polarity classification, magnitude estimation, and back-azimuth estimation.
 
 This repository also provides some baseline model implemented by Pytorch under `./models`, such as PhaseNet, EQTransformer, DitingMotion, MagNet, BAZ-Network, and distPT-Network. 
 
-NOTE: The model weights included in this repository serve as the basis for performance evaluation in this paper.  They have been evaluated using identical training and testing data and a consistent training regimen, thereby affirming the architecture's validity.  Nevertheless, if you intend to employ these models in practical engineering applications, it is crucial to retrain the SeisT models with larger datasets to align with the specific demands of engineering applications.
+NOTE: The model weights included in this repository serve as the basis for performance evaluation in the paper.  They have been evaluated using identical training and testing data and a consistent training regimen, thereby affirming the architecture's validity.  Nevertheless, if you intend to employ these models in practical engineering applications, it is crucial to retrain the SeisT models with larger datasets to align with the specific demands of engineering applications.
 
 ## Usage
 Training and testing tutorials will be completed soon.
