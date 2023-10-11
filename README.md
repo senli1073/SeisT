@@ -1,7 +1,7 @@
 # Seismogram Transformer (SeisT)
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/senli1073/SeisT/main/images/arch_main.png">
+  <img src="https://raw.githubusercontent.com/senli1073/SeisT/main/images/SeisT_Architecture.png">
 </p>
 
 
