@@ -1,7 +1,7 @@
 # Seismogram Transformer (SeisT)
 
 <p align="center">
-  <img src="images/arch_main.png" width="480">
+  <img src="https://raw.githubusercontent.com/senli1073/SeisT/main/images/arch_main.png">
 </p>
 
 
@@ -140,33 +140,33 @@ The following table provides the pre-trained checkpoints used in the paper:
 
 <tr><td align="left">Detection & Phase Picking</td>
 <td align="left">DiTing</td>
-<td align="center"><a href="pretrained/seist_s_dpk_diting.pth">download</a></td>
-<td align="center"><a href="pretrained/seist_m_dpk_diting.pth">download</a></td>
-<td align="center"><a href="pretrained/seist_l_dpk_diting.pth">download</a></td>
+<td align="center"><a href="https://raw.githubusercontent.com/senli1073/SeisT/main/pretrained/seist_s_dpk_diting.pth">download</a></td>
+<td align="center"><a href="https://raw.githubusercontent.com/senli1073/SeisT/main/pretrained/seist_m_dpk_diting.pth">download</a></td>
+<td align="center"><a href="https://raw.githubusercontent.com/senli1073/SeisT/main/pretrained/seist_l_dpk_diting.pth">download</a></td>
 
 <tr><td align="left">First-Motion Polarity Classification</td>
 <td align="left">DiTing</td>
-<td align="center"><a href="pretrained/seist_s_pmp_diting.pth">download</a></td>
-<td align="center"><a href="pretrained/seist_m_pmp_diting.pth">download</a></td>
-<td align="center"><a href="pretrained/seist_l_pmp_diting.pth">download</a></td>
+<td align="center"><a href="https://raw.githubusercontent.com/senli1073/SeisT/main/pretrained/seist_s_pmp_diting.pth">download</a></td>
+<td align="center"><a href="https://raw.githubusercontent.com/senli1073/SeisT/main/pretrained/seist_m_pmp_diting.pth">download</a></td>
+<td align="center"><a href="https://raw.githubusercontent.com/senli1073/SeisT/main/pretrained/seist_l_pmp_diting.pth">download</a></td>
 
 <tr><td align="left">Back-Azimuth Estimation</td>
 <td align="left">DiTing</td>
-<td align="center"><a href="pretrained/seist_s_baz_diting.pth">download</a></td>
-<td align="center"><a href="pretrained/seist_m_baz_diting.pth">download</a></td>
-<td align="center"><a href="pretrained/seist_l_baz_diting.pth">download</a></td>
+<td align="center"><a href="https://raw.githubusercontent.com/senli1073/SeisT/main/pretrained/seist_s_baz_diting.pth">download</a></td>
+<td align="center"><a href="https://raw.githubusercontent.com/senli1073/SeisT/main/pretrained/seist_m_baz_diting.pth">download</a></td>
+<td align="center"><a href="https://raw.githubusercontent.com/senli1073/SeisT/main/pretrained/seist_l_baz_diting.pth">download</a></td>
 
 <tr><td align="left">Magnitude Estimation</td>
 <td align="left">DiTing</td>
-<td align="center"><a href="pretrained/seist_s_emg_diting.pth">download</a></td>
-<td align="center"><a href="pretrained/seist_m_emg_diting.pth">download</a></td>
-<td align="center"><a href="pretrained/seist_l_emg_diting.pth">download</a></td>
+<td align="center"><a href="https://raw.githubusercontent.com/senli1073/SeisT/main/pretrained/seist_s_emg_diting.pth">download</a></td>
+<td align="center"><a href="https://raw.githubusercontent.com/senli1073/SeisT/main/pretrained/seist_m_emg_diting.pth">download</a></td>
+<td align="center"><a href="https://raw.githubusercontent.com/senli1073/SeisT/main/pretrained/seist_l_emg_diting.pth">download</a></td>
 
 <tr><td align="left">Magnitude Estimation</td>
 <td align="left">PNW</td>
-<td align="center"><a href="pretrained/seist_s_emg_pnw.pth">download</a></td>
-<td align="center"><a href="pretrained/seist_m_emg_pnw.pth">download</a></td>
-<td align="center"><a href="pretrained/seist_l_emg_pnw.pth">download</a></td>
+<td align="center"><a href="https://raw.githubusercontent.com/senli1073/SeisT/main/pretrained/seist_s_emg_pnw.pth">download</a></td>
+<td align="center"><a href="https://raw.githubusercontent.com/senli1073/SeisT/main/pretrained/seist_m_emg_pnw.pth">download</a></td>
+<td align="center"><a href="https://raw.githubusercontent.com/senli1073/SeisT/main/pretrained/seist_l_emg_pnw.pth">download</a></td>
 
 </tbody></table>
 
