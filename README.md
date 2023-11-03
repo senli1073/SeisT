@@ -14,6 +14,7 @@
     - [Testing](#testing)
   - [Citation](#citation)
   - [Reporting Bugs](#reporting-bugs)
+  - [Acknowledgement](#acknowledgement)
   - [License](#license)
 
 
@@ -257,6 +258,10 @@ If you are reporting a bug, please include:
 - Operating system version.
 - Versions of Python and the third-party libraries such as Pytorch.
 - Steps to reproduce the bug.
+
+
+## Acknowledgement
+This project refers to some excellent open source projects: [PhaseNet](https://github.com/AI4EPS/PhaseNet), [EQTransformer](https://github.com/smousavi05/EQTransformer), [DiTing-FOCALFLOW](https://github.com/mingzhaochina/DiTing-FOCALFLOW), [MagNet](https://github.com/smousavi05/MagNet), [Deep-Bays-Loc](https://github.com/smousavi05/Deep-Bays-Loc), [PNW-ML](https://github.com/niyiyu/PNW-ML) and [SeisBench](https://github.com/seisbench/seisbench).
 
 
 ## License
