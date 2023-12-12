@@ -121,7 +121,7 @@ class MLP(nn.Module):
         return x
 
 
-class DWConvNormAct(nn.Module):
+class DSConvNormAct(nn.Module):
     """Depthwise separable convolution"""
 
     def __init__(self, in_dim, out_dim, kernel_size, stride, act_layer, norm_layer):
@@ -167,7 +167,7 @@ class StemBlock(nn.Module):
 
         self.convs = nn.ModuleList(
             [
-                DWConvNormAct(
+                DSConvNormAct(
                     in_dim,
                     out_dim,
                     kernel_size + int(4 * delta_k),
