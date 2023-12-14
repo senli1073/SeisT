@@ -216,7 +216,7 @@ class DataPreprocessor:
 
             elif input_len < window_size:
                 data = np.concatenate(
-                    data, np.zeros((data.shape[0], window_size - input_len)), axis=1
+                    [data, np.zeros((data.shape[0], window_size - input_len))], axis=1
                 )
 
         return data, ppks, spks
