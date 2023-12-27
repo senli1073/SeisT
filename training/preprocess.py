@@ -921,7 +921,7 @@ class SeismicDataset(Dataset):
         else:
             return self._dataset_size
 
-    def __getitem__(self, idx: int) -> Tuple[Any, Any, Any]:
+    def __getitem__(self, idx: int) -> Tuple[Any, Any, Any, Any]:
         """
         Args:
             idx (int): Index

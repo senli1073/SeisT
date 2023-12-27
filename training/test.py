@@ -7,7 +7,7 @@ from .preprocess import SeismicDataset
 from .validate import validate
 
 
-def test_worker(args,device):
+def test_worker(args,device)->float:
     # Log
     logger.set_logger("test")
 

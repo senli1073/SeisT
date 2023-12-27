@@ -19,9 +19,9 @@
 
 
 ## Introduction
-SeisT is a backbone network for seismic signal processing, which can be used for multiple seismic monitoring tasks such as earthquake detection, seismic phase picking, first-motion polarity classification, magnitude estimation, and back-azimuth estimation.
+SeisT is a backbone network for seismic signal processing, which can be used for multiple seismic monitoring tasks such as earthquake detection, seismic phase picking, first-motion polarity classification, magnitude estimation, back-azimuth estimation, and epicentral distance estimation.
 
-This repository also provides some baseline model implemented by Pytorch under `./models`, such as PhaseNet, EQTransformer, DitingMotion, MagNet, BAZ-Network, and distPT-Network. 
+This repository also provides some baseline models implemented by Pytorch under `./models`, such as PhaseNet, EQTransformer, DitingMotion, MagNet, BAZ-Network, and distPT-Network. 
 
 NOTE: The model weights included in this repository serve as the basis for performance evaluation in the paper.  They have been evaluated using identical training and testing data and a consistent training regimen, thereby affirming the architecture's validity.  Nevertheless, if you intend to employ these models in practical engineering applications, it is crucial to retrain the SeisT models with larger datasets to align with the specific demands of engineering applications.
 
@@ -46,7 +46,7 @@ NOTE: The model weights included in this repository serve as the basis for perfo
   ```Python
   >>> from models import get_model_list
   >>> get_model_list()
-  ['seist_s_dpk', 'seist_m_dpk', 'seist_l_dpk', 'seist_s_pmp', 'seist_m_pmp', 'seist_l_pmp', 'seist_s_emg', 'seist_m_emg', 'seist_l_emg', 'seist_s_baz', 'seist_m_baz', 'seist_l_baz', 'eqtransformer', 'phasenet', 'magnet', 'baz_network', 'distpt_network', 'ditingmotion',]
+  ['seist_s_dpk', 'seist_m_dpk', 'seist_l_dpk', 'seist_s_pmp', 'seist_m_pmp', 'seist_l_pmp', 'seist_s_emg', 'seist_m_emg', 'seist_l_emg', 'seist_s_baz', 'seist_m_baz', 'seist_l_baz', 'seist_s_dis', 'seist_m_dis', 'seist_l_dis', 'eqtransformer', 'phasenet', 'magnet', 'baz_network', 'distpt_network', 'ditingmotion']
   ```
 
   The task names and their abbreviations in this project are shown in the table below:
@@ -62,14 +62,14 @@ NOTE: The model weights included in this repository serve as the basis for perfo
   <tr><td align="left">First-Motion Polarity Classification</td>
   <td align="left">pmp</td>
 
-
   <tr><td align="left">Back-Azimuth Estimation</td>
   <td align="left">baz</td>
-
 
   <tr><td align="left">Magnitude Estimation</td>
   <td align="left">emg</td>
 
+  <tr><td align="left">Epicentral Distance Estimation</td>
+  <td align="left">dis</td>
 
   </tbody></table>
 
@@ -133,7 +133,7 @@ The following table provides the pre-trained checkpoints used in the paper:
 <table><tbody>
 
 <th valign="bottom">Task</th>
-<th valign="bottom">Trainset</th>
+<th valign="bottom">Train set</th>
 <th valign="bottom">SeisT-S</th>
 <th valign="bottom">SeisT-M</th>
 <th valign="bottom">SeisT-L</th>
@@ -168,6 +168,12 @@ The following table provides the pre-trained checkpoints used in the paper:
 <td align="center"><a href="https://raw.githubusercontent.com/senli1073/SeisT/main/pretrained/seist_s_emg_pnw.pth">download</a></td>
 <td align="center"><a href="https://raw.githubusercontent.com/senli1073/SeisT/main/pretrained/seist_m_emg_pnw.pth">download</a></td>
 <td align="center"><a href="https://raw.githubusercontent.com/senli1073/SeisT/main/pretrained/seist_l_emg_pnw.pth">download</a></td>
+
+<tr><td align="left">Epicentral Distance Estimation</td>
+<td align="left">DiTing</td>
+<td align="center"><a href="https://raw.githubusercontent.com/senli1073/SeisT/main/pretrained/seist_s_dis_diting.pth">download</a></td>
+<td align="center"><a href="https://raw.githubusercontent.com/senli1073/SeisT/main/pretrained/seist_m_dis_diting.pth">download</a></td>
+<td align="center"><a href="https://raw.githubusercontent.com/senli1073/SeisT/main/pretrained/seist_l_dis_diting.pth">download</a></td>
 
 </tbody></table>
 
@@ -223,7 +229,7 @@ If you find this repo useful in your research, please consider citing:
 
 ```
 @misc{li2023seist,
-      title={Seismogram Transformer: A generic deep learning backbone network for multiple earthquake monitoring tasks}, 
+      title={SeisT: A foundational deep learning model for earthquake monitoring tasks}, 
       author={Sen Li and Xu Yang and Anye Cao and Changbin Wang and Yaoqi Liu and Yapeng Liu and Qiang Niu},
       year={2023},
       eprint={2310.01037},
@@ -246,7 +252,7 @@ The baseline model used in this paper:
 - **MagNet**<br/>
   *Mousavi, S. M., & Beroza, G. C. (2020). A machine‐learning approach for earthquake magnitude estimation. Geophysical Research Letters, 47(1), e2019GL085976.*
 
-- **BAZ-Network** & **distPT-Network**<br/>
+- **BAZ-Network** <br/>
   *Mousavi, S. M., & Beroza, G. C. (2020). Bayesian-Deep-Learning Estimation of Earthquake Location From Single-Station Observations. IEEE Transactions on Geoscience and Remote Sensing, 58(11), 8211-8224.*
 
 

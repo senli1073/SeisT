@@ -152,7 +152,7 @@ class MSELoss(nn.Module):
         return loss
 
 
-class ConbinationLoss(nn.Module):
+class CombinationLoss(nn.Module):
     """
     For multi-task learning.
     """
@@ -168,7 +168,7 @@ class ConbinationLoss(nn.Module):
         if len(losses) == 1:
             raise Exception(
                 f"Expected number of losses `>=2`, got {len(losses)}."
-                f" `ConbinationLoss` is used for multi-task training, and requires at least two loss modules."
+                f" `CombinationLoss` is used for multi-task training, and requires at least two loss modules."
                 f" Use `{losses[0]}` instead."
             )
 

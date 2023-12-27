@@ -28,7 +28,7 @@ def train(
     epoch,
     device,
     tensor_writer,
-) -> Union[float, dict]:
+) -> Union[list, dict]:
     model.train()
 
     # Save and display metrics

@@ -8,7 +8,7 @@ from models import (
     BCELoss,
     BinaryFocalLoss,
     CELoss,
-    ConbinationLoss,
+    CombinationLoss,
     FocalLoss,
     HuberLoss,
     MousaviLoss,
@@ -95,7 +95,7 @@ class Config:
         },
         # --------------------------------------------------------- BAZ Network
         "baz_network": {
-            "loss": partial(ConbinationLoss, losses=[MSELoss, MSELoss]),
+            "loss": partial(CombinationLoss, losses=[MSELoss, MSELoss]),
             "inputs": [["z", "n", "e"]],
             "labels": ["baz"],
             "eval": ["baz"],
@@ -112,7 +112,7 @@ class Config:
         # # The model has not been reproduced due to no travel time data in the DiTing dataset.
         # #
         # "distpt_network": {
-        #     "loss": ConbinationLoss(
+        #     "loss": CombinationLoss(
         #         losses=[MousaviLoss,MousaviLoss],
         #         losses_weights=[0.1,0.9]
         #     ),
@@ -125,7 +125,7 @@ class Config:
         # },
         # --------------------------------------------------------- DiTingMotion
         "ditingmotion": {
-            "loss": partial(ConbinationLoss, losses=[FocalLoss, FocalLoss]),
+            "loss": partial(CombinationLoss, losses=[FocalLoss, FocalLoss]),
             "inputs": [["z", "dz"]],
             "labels": ["clr", "pmp"],
             "eval": ["pmp"],

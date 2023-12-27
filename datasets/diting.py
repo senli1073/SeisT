@@ -8,8 +8,6 @@ import h5py
 from utils import logger
 from ._factory import register_dataset
 
-__all__ = ["DiTing", "DiTing_light"]
-
 
 """
 DiTing.

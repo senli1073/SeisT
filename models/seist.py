@@ -667,7 +667,7 @@ class SeismogramTransformer(nn.Module):
             mlp_bias (bool): mlp bias. Defaults to True.
             act_layer (nn.Module): Activation module. Defaults to nn.GELU.
             norm_layer (nn.Module): Normalization module. Defaults to nn.BatchNorm1d.
-            use_checkpoint (bool): whether use checkpoin to save memory. Defaults to False.
+            use_checkpoint (bool): whether use checkpoint to save memory. Defaults to False.
             output_head (nn.Module): Output head. Defaults to HeadDetectionPicking.
         """
         super().__init__()
@@ -1123,3 +1123,48 @@ def seist_l_baz(**kwargs):
     )
     return model
 
+
+
+@register_model
+def seist_s_dis(**kwargs):
+    """Epicentral distance estimation."""
+    model = SeismogramTransformer_S(
+        output_head=partial(
+            HeadRegression,
+            out_act_layer=partial(
+                ScaledActivation, act_layer=nn.Sigmoid, scale_factor=500
+            ),
+        ),
+        **kwargs,
+    )
+    return model
+
+
+@register_model
+def seist_m_dis(**kwargs):
+    """Epicentral distance estimation."""
+    model = SeismogramTransformer_M(
+        output_head=partial(
+            HeadRegression,
+            out_act_layer=partial(
+                ScaledActivation, act_layer=nn.Sigmoid, scale_factor=500
+            ),
+        ),
+        **kwargs,
+    )
+    return model
+
+
+@register_model
+def seist_l_dis(**kwargs):
+    """Epicentral distance estimation."""
+    model = SeismogramTransformer_L(
+        output_head=partial(
+            HeadRegression,
+            out_act_layer=partial(
+                ScaledActivation, act_layer=nn.Sigmoid, scale_factor=500
+            ),
+        ),
+        **kwargs,
+    )
+    return model

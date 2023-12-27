@@ -7,8 +7,6 @@ from utils import logger,cal_snr
 from ._factory import register_dataset
 
 
-__all__ = ["SOS"]
-
 
 class SOS(DatasetBase):
     """Waveform from sos"""
