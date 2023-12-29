@@ -244,7 +244,7 @@ If you find this repo useful in your research, please consider citing:
 }
 ```
 
-The baseline model used in this paper:
+The baseline models used in this paper:
 
 - **PhaseNet**<br/>
   *Zhu, W., & Beroza, G. C. (2019). PhaseNet: A deep-neural-network-based seismic arrival-time picking method. Geophysical Journal International, 216(1), 261-273.*
