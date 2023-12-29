@@ -4,6 +4,12 @@
   <img src="https://raw.githubusercontent.com/senli1073/SeisT/main/images/SeisT_Architecture.png">
 </p>
 
+------------------
+
+[![arXiv](https://img.shields.io/badge/arXiv-2310.01037-b31b1b)](https://arxiv.org/abs/2310.01037)
+![License](https://img.shields.io/github/license/senli1073/SeisT)
+![LastCommit](https://img.shields.io/github/last-commit/senli1073/SeisT)
+
 
 - [Seismogram Transformer (SeisT)](#seismogram-transformer-seist)
   - [Introduction](#introduction)

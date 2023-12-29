@@ -5,13 +5,12 @@ import copy
 class DatasetBase:
     """
     The base class for datasets.
-
     """
 
-    _name: str = ""
-    _part_range: Optional[tuple] = None
-    _channels: list = []
-    _sampling_rate: int = 0
+    _name: str
+    _part_range: Optional[tuple]
+    _channels: list
+    _sampling_rate: int
 
     def __init__(
         self,
