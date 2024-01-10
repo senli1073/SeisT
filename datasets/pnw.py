@@ -128,7 +128,7 @@ class PNW(DatasetBase):
         )
 
 
-        motion = {"positive": 0, "negative": 1}[motion.lower()]
+        motion = {"positive": 0, "negative": 1,"undecidable":2,"":3}[motion.lower()]
 
         assert mag_type.lower()=="ml"
 
