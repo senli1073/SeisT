@@ -5,7 +5,7 @@
 </p>
 
 ------------------
-
+[![TGRS](https://img.shields.io/badge/IEEE_TGRS-2024-blue)](https://doi.org/10.1109/TGRS.2024.3371503)
 [![arXiv](https://img.shields.io/badge/arXiv-2310.01037-b31b1b)](https://arxiv.org/abs/2310.01037)
 ![License](https://img.shields.io/github/license/senli1073/SeisT)
 ![LastCommit](https://img.shields.io/github/last-commit/senli1073/SeisT)
@@ -229,18 +229,20 @@ Use the "--checkpoint" argument to pass in the path of the pre-training weights.
 
 ## Citation
 
-Paper: https://arxiv.org/abs/2310.01037
+Paper: https://doi.org/10.1109/TGRS.2024.3371503
 
 If you find this repo useful in your research, please consider citing:
 
 ```
-@misc{li2023seist,
-      title={SeisT: A foundational deep learning model for earthquake monitoring tasks}, 
+@Article{li2023seist,
       author={Sen Li and Xu Yang and Anye Cao and Changbin Wang and Yaoqi Liu and Yapeng Liu and Qiang Niu},
-      year={2023},
-      eprint={2310.01037},
-      archivePrefix={arXiv},
-      primaryClass={physics.geo-ph}
+      journal={IEEE Transactions on Geoscience and Remote Sensing}, 
+      title={SeisT: A foundational deep learning model for earthquake monitoring tasks}, 
+      year={2024},
+      volume={},
+      number={},
+      pages={1-15},
+      doi={10.1109/TGRS.2024.3371503}
 }
 ```
 
