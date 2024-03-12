@@ -233,15 +233,14 @@ Paper: https://doi.org/10.1109/TGRS.2024.3371503
 If you find this repo useful in your research, please consider citing:
 
 ```
-@Article{li2023seist,
-      author={Sen Li and Xu Yang and Anye Cao and Changbin Wang and Yaoqi Liu and Yapeng Liu and Qiang Niu},
-      journal={IEEE Transactions on Geoscience and Remote Sensing}, 
-      title={SeisT: A foundational deep learning model for earthquake monitoring tasks}, 
-      year={2024},
-      volume={},
-      number={},
-      pages={1-15},
-      doi={10.1109/TGRS.2024.3371503}
+@ARTICLE{10453976,
+  author={Li, Sen and Yang, Xu and Cao, Anye and Wang, Changbin and Liu, Yaoqi and Liu, Yapeng and Niu, Qiang},
+  journal={IEEE Transactions on Geoscience and Remote Sensing}, 
+  title={SeisT: A Foundational Deep-Learning Model for Earthquake Monitoring Tasks}, 
+  year={2024},
+  volume={62},
+  pages={1-15},
+  doi={10.1109/TGRS.2024.3371503}
 }
 ```
 
