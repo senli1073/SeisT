@@ -1,30 +1,30 @@
 
+
+[![TGRS](https://img.shields.io/badge/IEEE_TGRS_(2024)-5908215-blue)](https://doi.org/10.1109/TGRS.2024.3371503)
+[![arXiv](https://img.shields.io/badge/arXiv-2310.01037-b31b1b)](https://arxiv.org/abs/2310.01037)
+![License](https://img.shields.io/github/license/senli1073/SeisT)
+![LastCommit](https://img.shields.io/github/last-commit/senli1073/SeisT)
+------------------
+
+- [SeisT Architecture](#seist-architecture)
+- [Introduction](#introduction)
+- [Usage](#usage)
+  - [Data preparation](#data-preparation)
+  - [Training](#training)
+  - [Fine-tuning](#fine-tuning)
+  - [Testing](#testing)
+- [Citation](#citation)
+- [Reporting Bugs](#reporting-bugs)
+- [Acknowledgement](#acknowledgement)
+- [License](#license)
+
+## SeisT Architecture
 <p align="center">
   <img src="https://raw.githubusercontent.com/senli1073/SeisT/main/images/SeisT_Architecture.png">
 </p>
 
-------------------
-[![TGRS](https://img.shields.io/badge/IEEE_TGRS-2024-blue)](https://doi.org/10.1109/TGRS.2024.3371503)
-[![arXiv](https://img.shields.io/badge/arXiv-2310.01037-b31b1b)](https://arxiv.org/abs/2310.01037)
-![License](https://img.shields.io/github/license/senli1073/SeisT)
-![LastCommit](https://img.shields.io/github/last-commit/senli1073/SeisT)
-
-
-- [Seismogram Transformer (SeisT)](#seismogram-transformer-seist)
-  - [Introduction](#introduction)
-  - [Usage](#usage)
-    - [Data preparation](#data-preparation)
-    - [Training](#training)
-    - [Fine-tuning](#fine-tuning)
-    - [Testing](#testing)
-  - [Citation](#citation)
-  - [Reporting Bugs](#reporting-bugs)
-  - [Acknowledgement](#acknowledgement)
-  - [License](#license)
-
-
 ## Introduction
-SeisT is a backbone network for seismic signal processing, which can be used for multiple seismic monitoring tasks such as earthquake detection, seismic phase picking, first-motion polarity classification, magnitude estimation, back-azimuth estimation, and epicentral distance estimation.
+SeisT is a backbone for seismic signal processing, which can be used for multiple seismic monitoring tasks such as earthquake detection, seismic phase picking, first-motion polarity classification, magnitude estimation, back-azimuth estimation, and epicentral distance estimation.
 
 This repository also provides some baseline models implemented by Pytorch under `./models`, such as PhaseNet, EQTransformer, DitingMotion, MagNet, BAZ-Network, and distPT-Network. 
 
@@ -32,7 +32,7 @@ NOTE: The model weights included in this repository serve as the basis for perfo
 
 ## Usage
 
-### Data preparation
+### Data Preparation
 
 - **For training and evaluation**
   
@@ -268,7 +268,7 @@ Report bugs at https://github.com/senli1073/SeisT/issues.
 If you are reporting a bug, please include:
 
 - Operating system version.
-- Versions of Python and the third-party libraries such as Pytorch.
+- Versions of Python and libraries such as Pytorch.
 - Steps to reproduce the bug.
 
 
