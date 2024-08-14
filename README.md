@@ -28,7 +28,7 @@ SeisT is a backbone for seismic signal processing, which can be used for multipl
 
 This repository also provides some baseline models implemented by Pytorch under `./models`, such as PhaseNet, EQTransformer, DitingMotion, MagNet, BAZ-Network, and distPT-Network. 
 
-NOTE: The model weights included in this repository serve as the basis for performance evaluation in the paper.  They have been evaluated using identical training and testing data and a consistent training regimen, thereby affirming the architecture's validity.  Nevertheless, if you intend to employ these models in practical engineering applications, it is crucial to retrain the SeisT models with larger datasets to align with the specific demands of engineering applications.
+NOTE: The model weights included in this repository serve as the basis for performance evaluation in the paper. They have been evaluated using identical training/testing data and a consistent training strategy, thereby affirming the effectiveness of SeisT. Nevertheless, if you intend to employ these models in practical engineering applications, it is crucial to retrain the SeisT models with larger datasets to align with the specific demands of engineering applications.
 
 ## Usage
 
@@ -36,7 +36,7 @@ NOTE: The model weights included in this repository serve as the basis for perfo
 
 - **For training and evaluation**
   
-  Create a new file named `yourdata.py` in the directory `dataset/` to read the metadata and seismograms of the dataset. And you need to use `@register_dataset` decorator to register your dataset. 
+  Create a new file named `yourdata.py` in the directory `dataset/` to read the metadata and seismograms of the dataset. Then the `@register_dataset` decorator needs to be used to register your dataset. 
 
   (Please refer to the code samples `datasets/DiTing.py` and `datasets/PNW.py`)
 
@@ -47,13 +47,12 @@ NOTE: The model weights included in this repository serve as the basis for perfo
 ### Training
 
 - **Model**<br/>
-  Before starting training, please make sure that your model code is in the directory `models/` and register it using the `@register_model` decorator. You can inspect the models available in the project using the following method: 
+  Before starting training, please make sure that your model file is in the directory `models/` and is registered by using `@register_model`. The  available models in the project can be inspected using the following method: 
   ```Python
   >>> from models import get_model_list
   >>> get_model_list()
-  ['seist_s_dpk', 'seist_m_dpk', 'seist_l_dpk', 'seist_s_pmp', 'seist_m_pmp', 'seist_l_pmp', 'seist_s_emg', 'seist_m_emg', 'seist_l_emg', 'seist_s_baz', 'seist_m_baz', 'seist_l_baz', 'seist_s_dis', 'seist_m_dis', 'seist_l_dis', 'eqtransformer', 'phasenet', 'magnet', 'baz_network', 'distpt_network', 'ditingmotion']
+  ['eqtransformer', 'phasenet', 'magnet', 'baz_network', 'distpt_network', 'ditingmotion', 'seist_s_dpk', 'seist_m_dpk', 'seist_l_dpk', 'seist_s_pmp', 'seist_m_pmp', 'seist_l_pmp', 'seist_s_emg', 'seist_m_emg', 'seist_l_emg', 'seist_s_baz', 'seist_m_baz', 'seist_l_baz', 'seist_s_dis', 'seist_m_dis', 'seist_l_dis']
   ```
-
   The task names and their abbreviations in this project are shown in the table below:
 
   <table><tbody>
@@ -79,11 +78,11 @@ NOTE: The model weights included in this repository serve as the basis for perfo
   </tbody></table>
 
 - **Model Configuration**<br/>
-  The configuration of the loss function and model labels is in `config.py`, and a more detailed explanation is provided in this file.
+  The configurations of the loss functions, labels, and the corresponding models are in `config.py` which also provides a detailed explanation of all the fields.
 
 
 - **Start training**<br/>
-  If you are training with a CPU or a single GPU, please use the following command to start training:
+  To start training with a CPU or a single GPU, please use the following command to start training:
   ```Shell
   python main.py \
     --seed 0 \
@@ -105,7 +104,7 @@ NOTE: The model weights included in this repository serve as the basis for perfo
     --batch-size 500
   ```
   
-  If you are training with multiple GPUs, please use `torchrun` to start training:
+  To start training with multiple GPUs, please use `torchrun` to start training:
   ```Shell
   torchrun \
     --nnodes 1 \
@@ -129,7 +128,7 @@ NOTE: The model weights included in this repository serve as the basis for perfo
       --batch-size 500
   ```
   
-  There are also many other custom arguments, see `main.py` for more details.
+  There are also a variety of other custom arguments which are not mentioned above. Use the command `python main.py --help` to see more details.
 
   
 ### Fine-tuning
@@ -185,7 +184,7 @@ The following table provides the pre-trained checkpoints used in the paper:
 Use the "--checkpoint" argument to pass in the path of the pre-training weights.
 
 ### Testing
-  If you are testing with a CPU or a single GPU, please use the following command to start testing:
+  To start training with a CPU or a single GPU, please use the following command to start testing:
 
   ```Shell
   python main.py \
@@ -204,7 +203,7 @@ Use the "--checkpoint" argument to pass in the path of the pre-training weights.
     --batch-size 500
   ```
   
-  If you are testing with multiple GPUs, please use `torchrun` to start testing:
+  To start training with multiple GPUs, please use `torchrun` to start testing:
   ```Shell
   torchrun \
     --nnodes 1 \
@@ -224,7 +223,7 @@ Use the "--checkpoint" argument to pass in the path of the pre-training weights.
       --batch-size 500
   ```
 
-  It should be noted that the `train_size` and `val_size` during testing must be consistent with that during training, and the `seed` must be consistent. Otherwise, the test results may be distorted.
+  It should be noted that the `train_size`, `val_size`, and `seed` in the test phase must be consistent with that training phase. Otherwise, the test results may be distorted.
 
 ## Citation
 
@@ -273,7 +272,7 @@ If you are reporting a bug, please include:
 
 
 ## Acknowledgement
-This project refers to some excellent open source projects: [PhaseNet](https://github.com/AI4EPS/PhaseNet), [EQTransformer](https://github.com/smousavi05/EQTransformer), [DiTing-FOCALFLOW](https://github.com/mingzhaochina/DiTing-FOCALFLOW), [MagNet](https://github.com/smousavi05/MagNet), [Deep-Bays-Loc](https://github.com/smousavi05/Deep-Bays-Loc), [PNW-ML](https://github.com/niyiyu/PNW-ML) and [SeisBench](https://github.com/seisbench/seisbench).
+This project refers to some excellent open source projects: [PhaseNet](https://github.com/AI4EPS/PhaseNet), [EQTransformer](https://github.com/smousavi05/EQTransformer), [DiTing-FOCALFLOW](https://github.com/mingzhaochina/DiTing-FOCALFLOW), [MagNet](https://github.com/smousavi05/MagNet), [Deep-Bays-Loc](https://github.com/smousavi05/Deep-Bays-Loc), [PNW-ML](https://github.com/niyiyu/PNW-ML), and [SeisBench](https://github.com/seisbench/seisbench).
 
 
 ## License
