@@ -38,11 +38,11 @@ NOTE: The model weights included in this repository serve as the basis for perfo
   
   Create a new file named `yourdata.py` in the directory `dataset/` to read the metadata and seismograms of the dataset. Then the `@register_dataset` decorator needs to be used to register your dataset. 
 
-  (Please refer to the code samples `datasets/DiTing.py` and `datasets/PNW.py`)
+  (Please refer to the code samples, such as `datasets/DiTing.py` and `datasets/PNW.py`)
 
 - **For model deployment**
 
-  Follow the steps in `demo_predict.py` and overload the `load_data` function.
+  Follow the steps in `demo_predict.py` and rewrite the `load_data` function.
 
 ### Training
 
