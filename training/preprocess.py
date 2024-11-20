@@ -481,14 +481,14 @@ class DataPreprocessor:
                 data = self._add_gaps(data, ppks, spks)
 
         if self.mask_percent > 0:
-            data = self._add_noise_windows(
+            data = self._add_mask_windows(
                 data=data,
                 percent=self.mask_percent,
                 window_size=self.sampling_rate // 2,
             )
 
         if self.noise_percent > 0:
-            data = self._add_mask_windows(
+            data = self._add_noise_windows(
                 data=data,
                 percent=self.noise_percent,
                 window_size=self.sampling_rate // 2,
