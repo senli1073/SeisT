@@ -194,7 +194,7 @@ class Config:
         "recall",
         "f1",
         "mean",
-        "std",
+        "rmse",
         "mae",
         "mape",
         "r2",
@@ -206,17 +206,17 @@ class Config:
 
     _avl_io_items = {
         # -------------------------------------------------------------------------- Channel-Z
-        "z": {"type": "soft", "metrics": ["mean", "std", "mae"]},
+        "z": {"type": "soft", "metrics": ["mean", "rmse", "mae"]},
         # -------------------------------------------------------------------------- Channel-N
-        "n": {"type": "soft", "metrics": ["mean", "std", "mae"]},
+        "n": {"type": "soft", "metrics": ["mean", "rmse", "mae"]},
         # -------------------------------------------------------------------------- Channel-E
-        "e": {"type": "soft", "metrics": ["mean", "std", "mae"]},
+        "e": {"type": "soft", "metrics": ["mean", "rmse", "mae"]},
         # -------------------------------------------------------------------------- Diff(Z)
-        "dz": {"type": "soft", "metrics": ["mean", "std", "mae"]},
+        "dz": {"type": "soft", "metrics": ["mean", "rmse", "mae"]},
         # -------------------------------------------------------------------------- Diff(N)
-        "dn": {"type": "soft", "metrics": ["mean", "std", "mae"]},
+        "dn": {"type": "soft", "metrics": ["mean", "rmse", "mae"]},
         # -------------------------------------------------------------------------- Diff(E)
-        "de": {"type": "soft", "metrics": ["mean", "std", "mae"]},
+        "de": {"type": "soft", "metrics": ["mean", "rmse", "mae"]},
         # -------------------------------------------------------------------------- 1-P(p)-P(s)
         "non": {"type": "soft", "metrics": []},
         # -------------------------------------------------------------------------- P(d)
@@ -224,12 +224,12 @@ class Config:
         # -------------------------------------------------------------------------- P(p)
         "ppk": {
             "type": "soft",
-            "metrics": ["precision", "recall", "f1", "mean", "std", "mae", "mape"],
+            "metrics": ["precision", "recall", "f1", "mean", "rmse", "mae", "mape"],
         },
         # -------------------------------------------------------------------------- P(s)
         "spk": {
             "type": "soft",
-            "metrics": ["precision", "recall", "f1", "mean", "std", "mae", "mape"],
+            "metrics": ["precision", "recall", "f1", "mean", "rmse", "mae", "mape"],
         },
         # -------------------------------------------------------------------------- P(p+)
         "ppk+": {"type": "soft", "metrics": []},
@@ -238,17 +238,17 @@ class Config:
         # -------------------------------------------------------------------------- P(d+)
         "det+": {"type": "soft", "metrics": []},
         # -------------------------------------------------------------------------- Phase-P indices
-        "ppks": {"type": "value", "metrics": ["mean", "std", "mae", "mape", "r2"]},
+        "ppks": {"type": "value", "metrics": ["mean", "rmse", "mae", "mape", "r2"]},
         # -------------------------------------------------------------------------- Phase-S indices
-        "spks": {"type": "value", "metrics": ["mean", "std", "mae", "mape", "r2"]},
+        "spks": {"type": "value", "metrics": ["mean", "rmse", "mae", "mape", "r2"]},
         # -------------------------------------------------------------------------- Event magnitude
-        "emg": {"type": "value", "metrics": ["mean", "std", "mae", "r2"]},
+        "emg": {"type": "value", "metrics": ["mean", "rmse", "mae", "r2"]},
         # -------------------------------------------------------------------------- Station magnitude
-        "smg": {"type": "value", "metrics": ["mean", "std", "mae", "r2"]},
+        "smg": {"type": "value", "metrics": ["mean", "rmse", "mae", "r2"]},
         # -------------------------------------------------------------------------- Back azimuth
-        "baz": {"type": "value", "metrics": ["mean", "std", "mae", "r2"]},
+        "baz": {"type": "value", "metrics": ["mean", "rmse", "mae", "r2"]},
         # -------------------------------------------------------------------------- Distance
-        "dis": {"type": "value", "metrics": ["mean", "std", "mae", "r2"]},
+        "dis": {"type": "value", "metrics": ["mean", "rmse", "mae", "r2"]},
         # -------------------------------------------------------------------------- P motion polarity
         "pmp": {
             "type": "onehot",
